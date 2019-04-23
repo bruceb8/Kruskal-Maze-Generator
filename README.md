@@ -1,1 +1,5 @@
 # Kruskal-Maze-Generator
+
+Using Kruskal's algorithm in reverse, we generate a random maze based on previously specified dimensions. Each "space" in the maze is selected randomly and connected to a neighboring space in a random direction to create a "section". Each section is assigned an ID to uniquely identify it from other sections we may create during run time. Each random space we select cannot be connected with another space in its section. Whenever we join 2 sections together, we proliferate one of their IDs to all connected spaces.
+
+Once the maze is constructed, we start from the entrance and iterate over every potential space until we find the entrance. We do this by marking each node we visit with a flag and adding it to a list. If the node is a dead end, we remove it from the list. If we already have been to the node, we don't go add it to the list. Every time we arrive at a new node, we check if it is the exit. If it is, we flip a boolean in all the node we have added so far to show a solution to the maze.
