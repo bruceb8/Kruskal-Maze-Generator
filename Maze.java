@@ -137,7 +137,7 @@ public class Maze {
     * maze path solution.
     */
    void FindPath() {
-      //now we need to traverse the node. we can do some bitch baby recursion or something
+      //now we need to traverse the node. we can do some baby recursion or something
       myGraph[0][0].Visited = true;
       myGraph[myDepth - 1][myWidth - 1].Enter = true;
       ArrayList<MazeNode> myPath = new ArrayList<MazeNode>();
